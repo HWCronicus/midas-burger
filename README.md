@@ -44,6 +44,7 @@ midas-burgers/
 ├── js/
 │   ├── cart.js         # Shopping cart logic & state management
 │   └── main.js         # Navigation, animations, and page effects
+│   └── locations.js    # Google Map and location link map interactions
 └── assets/
     ├── images/         # Locally AI-generated images
     └── videos/         # Locally AI-generated background/promo videos
