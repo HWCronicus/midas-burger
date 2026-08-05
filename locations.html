@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Midas</title>
+    <title>Midas Burger</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/locations.css" />
-    <script src="./js/main.js"></script>
-    <script src="./js/locations.js"></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/cart.js" defer></script>
+    <script src="./js/locations.js" async defer></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFwkwUn0pCyx5uj-bJ28ON3VBx7l1Fs70&callback=initMap"
       async
@@ -15,18 +16,18 @@
     ></script>
   </head>
   <body>
-    <div class="page-shell">
+    <div class="container">
       <header class="top-bar">
-        <div class="top-bar-inner">
-          <div class="brand-wrap">
-            <a class="brand-link" href="#home" aria-label="Midas home">
+        <div class="top-bar-contents">
+          <div class="logo-container">
+            <a class="logo-link" href="./index.html" aria-label="Midas home">
               <img src="./assets/images/logo.png" alt="Midas logo" />
             </a>
           </div>
 
-          <div class="nav-wrap" aria-label="Primary navigation">
+          <div class="nav-container" aria-label="Primary navigation">
             <button
-              class="nav-toggle"
+              class="nav-hamburger-toggle"
               type="button"
               aria-expanded="false"
               aria-controls="primary-navigation"
@@ -39,7 +40,7 @@
             <nav class="nav" id="primary-navigation">
               <a href="./index.html">home</a>
               <a class="is-active" href="./locations.html">location</a>
-              <a href="#about">about us</a>
+              <a href="./about.html">about us</a>
               <a href="#menu">menu</a>
             </nav>
           </div>
@@ -70,9 +71,9 @@
             <div class="eyebrow">Midas Locations</div>
             <h1>Find a Midas Burger Near You</h1>
             <p>
-              Visit one of our three Jacksonville locations for chef-driven
-              burgers, handcrafted drinks, and late-evening hours. Select an
-              address to center the map.
+              Visit one of our three Jacksonville locations for handcrafted
+              burgers, artisanal cocktails, and late night dining with live
+              music on the weekends.
             </p>
           </div>
 
@@ -113,9 +114,9 @@
               <section id="disclaimer" class="disclaimer">
                 <p>
                   These addresses are for demonstration purposes only. The
-                  addresses are real Walmart locations. They do not represent
-                  real Midas Burger locations, and no orders will be fulfilled
-                  at these addresses.
+                  addresses are of real Walmart locations and they do not
+                  represent a real Midas Burger locations, no orders will be
+                  fulfilled at these addresses. It's a Walmart..
                 </p>
               </section>
             </aside>

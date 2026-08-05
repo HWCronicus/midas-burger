@@ -1,0 +1,135 @@
+.home-content {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: center;
+  gap: 28px;
+  padding: 42px 0 54px;
+}
+
+.home-hero {
+  grid-column: 1 / span 7;
+  max-width: 680px;
+}
+
+.home-hero p {
+  max-width: 58ch;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.button.primary {
+  background: linear-gradient(
+    180deg,
+    rgba(200, 162, 74, 0.98),
+    rgba(143, 107, 31, 0.98)
+  );
+  color: #111;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.button.secondary {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.stat-panel {
+  grid-column: 8 / -1;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.015)
+  );
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.stat-panel h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+
+.stat-panel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.stat-panel-grid {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.stat {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(200, 162, 74, 0.18);
+}
+
+.stat strong {
+  display: block;
+  font-size: 1.08rem;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.stat span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 980px) {
+  .hero-copy,
+  .stat-panel {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero {
+    padding-top: 8px;
+  }
+
+  .hero-copy,
+  .stat-panel {
+    grid-column: 1 / -1;
+  }
+}

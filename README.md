@@ -40,7 +40,10 @@ midas-burgers/
 ├── menu.html           # Restaurant Menu & Ordering Page
 ├── checkout.html       # Cart Summary & Simulated Checkout
 ├── css/
-│   └── styles.css      # Primary stylesheet
+│   └── styles.css      # Primary styling
+│   └── home.css        # Home page specific styling
+│   └── locations.css   # Location page and Google Map styling
+│   └── about.css       # About Us page, and embedded video styling
 ├── js/
 │   ├── cart.js         # Shopping cart logic & state management
 │   └── main.js         # Navigation, animations, and page effects

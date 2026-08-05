@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Midas Burger</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/about.css" />
     <script src="./js/main.js" defer></script>
-    <script src="./js/cart.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -15,11 +14,7 @@
         <div class="top-bar-contents">
           <div class="logo-container">
             <a class="logo-link" href="./index.html" aria-label="Midas home">
-              <img
-                class="logo"
-                src="./assets/images/logo.png"
-                alt="Midas logo"
-              />
+              <img src="./assets/images/logo.png" alt="Midas logo" />
             </a>
           </div>
 
@@ -36,9 +31,9 @@
               <span></span>
             </button>
             <nav class="nav" id="primary-navigation">
-              <a class="is-active" href="./index.html">home</a>
+              <a href="./index.html">home</a>
               <a href="./locations.html">location</a>
-              <a href="./about.html">about us</a>
+              <a class="is-active" href="./about.html">about us</a>
               <a href="#menu">menu</a>
             </nav>
           </div>
@@ -63,55 +58,42 @@
         </div>
       </header>
 
-      <main id="home">
-        <section class="home-content">
-          <div class="home-hero">
-            <div class="eyebrow">Solid Gold Dining</div>
-            <h1>Modern burgers that are as good as gold.</h1>
-            <p>
-              At Midas, every burger starts with prime cuts, house-baked buns,
-              and chef-crafted sauces finished to order. Expect bold flavors,
-              refined presentation, and a dining experience made for nights out.
-            </p>
+      <main id="about">
+        <section class="about-content">
+          <div class="about-layout">
+            <div
+              class="about-video"
+              aria-label="Restaurant story video placeholder"
+            >
+              <div class="about-video-frame">
+                <div class="about-video-label">Video Placeholder</div>
+                <p>
+                  Embedded video area for the Midas family story and community
+                  highlights.
+                </p>
+              </div>
+            </div>
 
-            <div class="hero-actions">
-              <a class="button primary" href="#menu">view menu</a>
-              <a class="button secondary" href="./locations.html">find us</a>
+            <div class="about-us">
+              <div class="eyebrow">Who are we?</div>
+              <h1>Two Generations, One Community</h1>
+              <p>
+                Born from a beat-up food truck with a single grill, Midas Burger
+                has grown into three locations in the Jacksonville Metro area,
+                thanks to one simple formula: exceptional food, an energetic
+                atmosphere, and a deep commitment to our community. Now a
+                second-generation family-run local favorite, we deliver the same
+                quality and consistency that made us a Jacksonville staple from
+                day one.
+              </p>
+              <p>
+                Beyond the kitchen, our family partners with local schools,
+                churches, and volunteers to host seasonal food drives and
+                support Jacksonville beach cleanups. Serving great burgers is
+                only part of our mission; it is also serving our community!
+              </p>
             </div>
           </div>
-
-          <aside class="stat-panel" aria-label="Highlights">
-            <h2>Why guests choose Midas</h2>
-            <p>
-              From first bite to last sip, our menu is designed to feel elevated
-              yet approachable, pairing gourmet burgers with a lounge-style
-              atmosphere.
-            </p>
-
-            <div class="stat-panel-grid">
-              <div class="stat">
-                <strong>Prime ingredients</strong>
-                <span
-                  >Fresh-ground beef, artisan buns, and market produce
-                  daily.</span
-                >
-              </div>
-              <div class="stat">
-                <strong>Signature finishes</strong>
-                <span
-                  >House sauces, truffle fries, and chef-led seasonal
-                  specials.</span
-                >
-              </div>
-              <div class="stat">
-                <strong>Crafted for evenings</strong>
-                <span
-                  >Curated cocktails and late-night service in a modern
-                  setting.</span
-                >
-              </div>
-            </div>
-          </aside>
         </section>
 
         <section id="disclaimer" class="disclaimer">

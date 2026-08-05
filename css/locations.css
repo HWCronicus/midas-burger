@@ -1,9 +1,10 @@
 .locations-hero {
-  padding-top: 10px;
+  gap: 28px;
+  padding: 42px 0 54px;
 }
 
 .locations-heading {
-  max-width: 72ch;
+  max-width: 200ch;
 }
 
 .locations-heading h1 {
@@ -14,6 +15,9 @@
 }
 
 .locations-heading p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
