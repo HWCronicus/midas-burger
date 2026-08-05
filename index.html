@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Midas</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="top-bar">
+        <div class="top-bar-inner">
+          <div class="brand-wrap">
+            <a class="brand-link" href="#home" aria-label="Midas home">
+              <img src="./assets/images/logo.png" alt="Midas logo" />
+            </a>
+          </div>
+
+          <div class="nav-wrap" aria-label="Primary navigation">
+            <button
+              class="nav-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-navigation"
+              aria-label="Open navigation menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <nav class="nav" id="primary-navigation">
+              <a class="is-active" href="#home">home</a>
+              <a href="#location">location</a>
+              <a href="#about">about us</a>
+              <a href="#menu">menu</a>
+            </nav>
+          </div>
+
+          <button class="cart-button" type="button" aria-label="Shopping cart">
+            <span class="cart-count">0</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="9" cy="20" r="1.4"></circle>
+              <circle cx="17" cy="20" r="1.4"></circle>
+              <path
+                d="M3 4h2l2.1 10.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.5l1.4-6.3H7.1"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="home">
+        <section class="hero">
+          <div class="hero-copy">
+            <div class="eyebrow">Solid Gold Dining</div>
+            <h1>Modern burgers that are as good as gold.</h1>
+            <p>
+              At Midas, every burger starts with prime cuts, house-baked buns,
+              and chef-crafted sauces finished to order. Expect bold flavors,
+              refined presentation, and a dining experience made for nights out.
+            </p>
+
+            <div class="hero-actions">
+              <a class="button primary" href="#menu">view menu</a>
+              <a class="button secondary" href="#location">find us</a>
+            </div>
+          </div>
+
+          <aside class="panel" aria-label="Highlights">
+            <h2>Why guests choose Midas</h2>
+            <p>
+              From first bite to last sip, our menu is designed to feel elevated
+              yet approachable, pairing gourmet burgers with a lounge-style
+              atmosphere.
+            </p>
+
+            <div class="panel-grid">
+              <div class="stat">
+                <strong>Prime ingredients</strong>
+                <span
+                  >Fresh-ground beef, artisan buns, and market produce
+                  daily.</span
+                >
+              </div>
+              <div class="stat">
+                <strong>Signature finishes</strong>
+                <span
+                  >House sauces, truffle fries, and chef-led seasonal
+                  specials.</span
+                >
+              </div>
+              <div class="stat">
+                <strong>Crafted for evenings</strong>
+                <span
+                  >Curated cocktails and late-night service in a modern
+                  setting.</span
+                >
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <section id="disclaimer" class="disclaimer">
+          <p>
+            This is a demo site built for educational purposes. It is not a real
+            restaurant, and no orders will be fulfilled. All images and content
+            are AI generated or sourced from free stock images and are for
+            demonstration only.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script></script>
+  </body>
+</html>
