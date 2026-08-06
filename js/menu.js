@@ -24,7 +24,7 @@ function createMenuItemCard(item) {
   return `
     <div class="menu-card" item-id="${item.itemId}">
       <object class="menu-card-image" data="${item.image}" alt="${item.name}" loading="lazy" type="image/jpg">
-        <img class="menu-card-image" src="https://placehold.co/800x500/1f1f1f/e2c46f?text=${item.name.split(` `).join(`+`)}" alt="${item.name}" loading="lazy"/>
+        <img class="menu-card-image" src="${generatePlaceholderImageUrl(item.name)}" alt="${item.name}" loading="lazy"/>
       </object>
       <div class="menu-card-body">
         <h3 class="menu-card-name">${item.name}</h3>

@@ -3,6 +3,9 @@ window.CartAPI = {
   updateItem: updateItemInCart,
   removeItem: removeItemFromCart,
   getItems: getCartItems,
+  getTotalPrice: () => formatToCurrency(getCartTotals().totalPrice),
+  clearCart: clearCart,
+  formatToCurrency: formatToCurrency,
 };
 
 const CART_STORAGE = "midas_burger_cart_data";
@@ -11,7 +14,7 @@ let cartState = [];
 let cartTriggerButton = null;
 let cartMenu = null;
 
-function formatMoney(amount) {
+function formatToCurrency(amount) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "USD",
@@ -48,10 +51,10 @@ function getCartTotals() {
   return cartState.reduce(
     (totals, item) => {
       totals.itemCount += item.quantity;
-      totals.total += item.price * item.quantity;
+      totals.totalPrice += item.price * item.quantity;
       return totals;
     },
-    { itemCount: 0, total: 0 },
+    { itemCount: 0, totalPrice: 0 },
   );
 }
 
@@ -203,16 +206,16 @@ function renderCart() {
     return;
   }
 
-  const { total } = getCartTotals();
+  const { totalPrice } = getCartTotals();
 
   if (cartState.length === 0) {
     cartMenu.innerHTML = `
       <div class="cart-empty">Your cart is empty.</div>
       <div class="cart-footer">
-        <span class="cart-total">Total: ${formatMoney(0)}</span>
+        <span class="cart-total">Total: ${formatToCurrency(0)}</span>
         <div class="cart-actions">
           <button class="cart-clear-button is-disabled" type="button" disabled>Clear Cart</button>
-          <a class="cart-checkout-button is-disabled" href="#checkout" aria-disabled="true">Checkout</a>
+          <a class="cart-checkout-button is-disabled" href="./checkout.html" aria-disabled="true">Checkout</a>
         </div>
       </div>
     `;
@@ -224,13 +227,15 @@ function renderCart() {
       const combinedPrice = item.price * item.quantity;
       return `
         <li class="cart-item">
-          <img class="cart-thumb" src="${item.image}" alt="${item.name}" loading="lazy" />
+          <object class="cart-thumb" data="${item.image}" alt="${item.name}" loading="lazy" type="image/jpg">
+            <img class="cart-thumb" src="${generatePlaceholderImageUrl(item.name)}" alt="${item.name}" loading="lazy"/>
+            </object>
           <div class="cart-item-details">
             <span class="cart-item-name">${item.name}</span>
             <input class="cart-item-quantity" type="number" min="1" step="1" value="${item.quantity}" aria-label="Quantity for ${item.name}" onChange="updateItemInCart('${item.itemId}', { quantity: Number(this.value) })" />
             <button class="cart-item-remove" type="button" item-id="${item.itemId}" aria-label="Remove ${item.name} from cart">Remove</button>
           </div>
-          <span class="cart-item-total">${formatMoney(combinedPrice)}</span>
+          <span class="cart-item-total">${formatToCurrency(combinedPrice)}</span>
         </li>
       `;
     })
@@ -239,10 +244,10 @@ function renderCart() {
   cartMenu.innerHTML = `
     <ul class="cart-list">${rowsMarkup}</ul>
     <div class="cart-footer">
-      <span class="cart-total">Total: ${formatMoney(total)}</span>
+      <span class="cart-total">Total: ${formatToCurrency(totalPrice)}</span>
       <div class="cart-actions">
         <button class="cart-clear-button" type="button">Clear Cart</button>
-        <a class="cart-checkout-button" href="#checkout">Checkout</a>
+        <a class="cart-checkout-button" href="./checkout.html">Checkout</a>
       </div>
     </div>
   `;

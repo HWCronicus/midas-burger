@@ -305,11 +305,6 @@ a {
   text-transform: uppercase;
 }
 
-/* .cart-item-meta {
-  font-size: 0.8rem;
-  color: var(--muted);
-} */
-
 .cart-item-total {
   font-size: 0.86rem;
   color: var(--gold-soft);
