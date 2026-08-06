@@ -1,0 +1,157 @@
+.menu-content {
+  display: grid;
+  gap: 34px;
+  padding-top: 28px;
+}
+
+.menu-intro {
+  max-width: 74ch;
+}
+
+.menu-intro h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2.2rem, 4.8vw, 4.1rem);
+  line-height: 1.02;
+}
+
+.menu-intro p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.menu-section {
+  display: grid;
+  gap: 16px;
+}
+
+.menu-section-title {
+  margin: 0;
+  color: var(--gold-soft);
+  text-transform: uppercase underline;
+  letter-spacing: 0.12em;
+  font-size: 2.5rem;
+  border-bottom: 1px solid var(--gold-soft);
+  padding-bottom: 6px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.menu-card {
+  border: 1px solid rgba(200, 162, 74, 0.22);
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.025),
+    rgba(255, 255, 255, 0.01)
+  );
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-card-body {
+  display: grid;
+  gap: 10px;
+  padding: 14px 14px 16px;
+}
+
+.menu-card-name {
+  margin: 0;
+  font-size: 1.12rem;
+  line-height: 1.3;
+}
+
+.menu-card-description {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.52;
+  min-height: 3em;
+}
+
+.menu-card-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-card-price {
+  font-weight: 700;
+  color: var(--gold-soft);
+  min-width: 74px;
+}
+
+.menu-card-quantity {
+  width: 66px;
+  min-height: 36px;
+  padding: 0 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(200, 162, 74, 0.28);
+  background: rgba(16, 16, 16, 0.9);
+  color: var(--text);
+}
+
+.menu-card-quantity:focus-visible {
+  outline: 2px solid rgba(226, 196, 111, 0.55);
+  outline-offset: 1px;
+}
+
+.add-to-cart {
+  margin-left: auto;
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(200, 162, 74, 0.35);
+  background: linear-gradient(
+    180deg,
+    rgba(200, 162, 74, 0.95),
+    rgba(143, 107, 31, 0.95)
+  );
+  color: #111;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@media (max-width: 980px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-content {
+    padding-top: 16px;
+    gap: 24px;
+  }
+
+  .menu-card-image {
+    height: 190px;
+  }
+
+  .menu-card-row {
+    flex-wrap: wrap;
+  }
+
+  .add-to-cart {
+    margin-left: 0;
+  }
+}

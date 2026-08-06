@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Midas Burger</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/menu.css" />
+    <script src="./js/main.js" defer></script>
+    <script src="./js/cart.js" defer></script>
+    <script src="./js/menu.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="top-bar">
+        <div class="top-bar-contents">
+          <div class="logo-container">
+            <a class="logo-link" href="./index.html" aria-label="Midas home">
+              <img
+                class="logo"
+                src="./assets/images/logo.png"
+                alt="Midas logo"
+              />
+            </a>
+          </div>
+
+          <div class="nav-container" aria-label="Primary navigation">
+            <button
+              class="nav-hamburger-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="primary-navigation"
+              aria-label="Open navigation menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <nav class="nav" id="primary-navigation">
+              <a href="./index.html">home</a>
+              <a href="./locations.html">location</a>
+              <a href="./about.html">about us</a>
+              <a class="is-active" href="./menu.html">menu</a>
+            </nav>
+          </div>
+
+          <button class="cart-button" type="button" aria-label="Shopping cart">
+            <span class="cart-count">0</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="9" cy="20" r="1.4"></circle>
+              <circle cx="17" cy="20" r="1.4"></circle>
+              <path
+                d="M3 4h2l2.1 10.2a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.5l1.4-6.3H7.1"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <main id="menu">
+        <section class="menu-content">
+          <div class="menu-intro">
+            <div class="eyebrow">Midas Menu</div>
+            <h1>Crafted Favorites, Day and Night</h1>
+            <p>
+              Explore our current lineup of shareable starters, chef-built
+              burgers, premium sides, and handcrafted drinks.
+            </p>
+          </div>
+        </section>
+
+        <section id="disclaimer" class="disclaimer">
+          <p>
+            This is a demo site built for educational purposes. It is not a real
+            restaurant, and no orders will be fulfilled. All images and content
+            are AI generated or sourced from free stock images and are for
+            demonstration only.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <script></script>
+  </body>
+</html>

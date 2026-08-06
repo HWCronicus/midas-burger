@@ -1,0 +1,145 @@
+[
+  {
+    "key": "appetizers",
+    "title": "Appetizers",
+    "items": [
+      {
+        "itemId": "app-001",
+        "name": "Crispy Truffle Fries",
+        "description": "Hand-cut fries finished with truffle oil, parmesan, and herb salt.",
+        "price": 8.5,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Crispy+Truffle+Fries"
+      },
+      {
+        "itemId": "app-002",
+        "name": "Wagyu Sliders",
+        "description": "Three mini wagyu sliders with caramelized onion and smoked aioli.",
+        "price": 13,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Wagyu+Sliders"
+      },
+      {
+        "itemId": "app-003",
+        "name": "Smoked Wings",
+        "description": "Applewood-smoked wings glazed in honey chipotle and crispy shallots.",
+        "price": 12,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Smoked+Wings"
+      },
+      {
+        "itemId": "app-004",
+        "name": "Golden Onion Rings",
+        "description": "Buttermilk battered onion rings served with saffron remoulade.",
+        "price": 9.5,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Golden+Onion+Rings"
+      }
+    ]
+  },
+  {
+    "key": "burgers",
+    "title": "Burgers",
+    "items": [
+      {
+        "itemId": "brg-001",
+        "name": "The Midas Signature",
+        "description": "Double smash patties, aged cheddar, house pickles, and black garlic aioli.",
+        "price": 16,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=The+Midas+Signature"
+      },
+      {
+        "itemId": "brg-002",
+        "name": "Truffle Bistro Burger",
+        "description": "Prime beef, wild mushroom spread, truffle brie, and arugula.",
+        "price": 18.5,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Truffle+Bistro+Burger"
+      },
+      {
+        "itemId": "brg-003",
+        "name": "Bourbon Bacon Stack",
+        "description": "Bourbon-glazed bacon, crispy onions, sharp cheddar, and bourbon sauce.",
+        "price": 17.5,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Bourbon+Bacon+Stack"
+      },
+      {
+        "itemId": "brg-004",
+        "name": "Hot Honey Firebird",
+        "description": "Crispy chicken breast, pepper jack, slaw, and hot honey drizzle.",
+        "price": 15,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Hot+Honey+Firebird"
+      },
+      {
+        "itemId": "brg-005",
+        "name": "Garden Luxe",
+        "description": "Plant-based patty, avocado mash, tomato jam, and butter lettuce.",
+        "price": 15.5,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Garden+Luxe"
+      }
+    ]
+  },
+  {
+    "key": "sides",
+    "title": "Sides",
+    "items": [
+      {
+        "itemId": "sid-001",
+        "name": "Parmesan Garlic Tots",
+        "description": "Golden tater tots tossed with garlic butter, parmesan, and parsley.",
+        "price": 7.5,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Parmesan+Garlic+Tots"
+      },
+      {
+        "itemId": "sid-002",
+        "name": "Roasted Street Corn",
+        "description": "Charred sweet corn with lime crema, cotija, and smoked chili.",
+        "price": 8,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Roasted+Street+Corn"
+      },
+      {
+        "itemId": "sid-003",
+        "name": "House Slaw",
+        "description": "Crisp cabbage and carrot slaw with citrus-mustard dressing.",
+        "price": 6,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=House+Slaw"
+      },
+      {
+        "itemId": "sid-004",
+        "name": "Mac and Three Cheese",
+        "description": "Creamy elbow pasta with cheddar, gruyere, and smoked gouda.",
+        "price": 9,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Mac+and+Three+Cheese"
+      }
+    ]
+  },
+  {
+    "key": "drinks",
+    "title": "Drinks",
+    "items": [
+      {
+        "itemId": "drk-001",
+        "name": "Smoked Old Fashioned",
+        "description": "Bourbon, demerara, bitters, and orange oils with oak smoke.",
+        "price": 14,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Smoked+Old+Fashioned"
+      },
+      {
+        "itemId": "drk-002",
+        "name": "Golden Hour Spritz",
+        "description": "Citrus aperitif, sparkling wine, and grapefruit tonic.",
+        "price": 12,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Golden+Hour+Spritz"
+      },
+      {
+        "itemId": "drk-003",
+        "name": "Blackberry Mint Lemonade",
+        "description": "Fresh lemon, blackberry puree, mint, and sparkling water.",
+        "price": 7,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Blackberry+Mint+Lemonade"
+      },
+      {
+        "itemId": "drk-004",
+        "name": "Cold Brew Float",
+        "description": "House cold brew topped with vanilla bean cream float.",
+        "price": 8.5,
+        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Cold+Brew+Float"
+      }
+    ]
+  }
+]
