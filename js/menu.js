@@ -1,18 +1,31 @@
+let menuData = null;
+
 async function fetchMenuData() {
-  const data = await fetch("./data/menu.json").then((response) => {
+  menuData = await fetch("./data/menu.json").then((response) => {
     if (!response.ok) {
       throw new Error(`Failed to load menu data (${response.url})`);
     }
     return response.json();
   });
+}
 
-  return data;
+function buildSections(title, items) {
+  const menuItemCards = items.map(createMenuItemCard).join("");
+
+  return `
+    <section class="menu-section" id="menu-${title.toLowerCase()}">
+      <h2 class="menu-section-title">${title}</h2>
+      <div class="menu-grid">${menuItemCards}</div>
+    </section>
+  `;
 }
 
 function createMenuItemCard(item) {
   return `
-    <div class="menu-card" data-item-id="${item.itemId}">
-      <img class="menu-card-image" src="${item.image}" alt="${item.name}" loading="lazy" />
+    <div class="menu-card" item-id="${item.itemId}">
+      <object class="menu-card-image" data="${item.image}" alt="${item.name}" loading="lazy" type="image/jpg">
+        <img class="menu-card-image" src="https://placehold.co/800x500/1f1f1f/e2c46f?text=${item.name.split(` `).join(`+`)}" alt="${item.name}" loading="lazy"/>
+      </object>
       <div class="menu-card-body">
         <h3 class="menu-card-name">${item.name}</h3>
         <p class="menu-card-description">${item.description}</p>
@@ -33,18 +46,6 @@ function createMenuItemCard(item) {
   `;
 }
 
-function buildSections(title, items) {
-  const menuItemCards = items.map(createMenuItemCard).join("");
-
-  return `
-    <section class="menu-section" id="menu-${title.toLowerCase()}">
-      <h2 class="menu-section-title">${title}</h2>
-      <div class="menu-grid">${menuItemCards}</div>
-    </section>
-  `;
-}
-
-// Disable cart actions for now until the cart functionality is implemented
 function addToCartButton(menuContent) {
   menuContent.addEventListener("click", (event) => {
     if (
@@ -52,6 +53,76 @@ function addToCartButton(menuContent) {
       event.target.matches(".add-to-cart")
     ) {
       event.preventDefault();
+
+      const card = event.target.closest(".menu-card");
+      if (!card || !window.CartAPI) {
+        return;
+      }
+
+      const itemId = card.getAttribute("item-id") || "";
+      const item = menuData
+        .map((section) => section.items)
+        .flat()
+        .find((item) => item.itemId === itemId);
+
+      const name = item.name;
+      const image = item.image;
+      const price = item.price || 0;
+
+      const quantityValue =
+        card.querySelector(".menu-card-quantity")?.value || "1";
+      const quantity = Math.max(0, Math.floor(Number(quantityValue) || 0));
+      const existingItem = window.CartAPI.getItems().find(
+        (item) => item.itemId === itemId,
+      );
+
+      if (existingItem) {
+        if (quantity === 0) {
+          window.CartAPI.removeItem(itemId);
+        } else {
+          window.CartAPI.updateItem(itemId, { quantity });
+        }
+      } else {
+        window.CartAPI.addItem({
+          itemId,
+          name,
+          image,
+          price,
+          quantity,
+        });
+      }
+    }
+  });
+}
+
+function syncMenuFromCart(menuContent) {
+  if (!window.CartAPI) {
+    return;
+  }
+
+  const cartItems = window.CartAPI.getItems();
+  const quantitiesById = new Map(
+    cartItems.map((item) => [item.itemId, item.quantity]),
+  );
+
+  menuContent.querySelectorAll(".menu-card").forEach((card) => {
+    const itemId = card.getAttribute("item-id") || "";
+    const quantityInput = card.querySelector(".menu-card-quantity");
+    const actionButton = card.querySelector(".add-to-cart");
+
+    if (!(quantityInput instanceof HTMLInputElement)) {
+      return;
+    }
+
+    const existingQuantity = quantitiesById.get(itemId);
+    const quantity = existingQuantity || 1;
+    quantityInput.value = String(quantity);
+    quantityInput.min = existingQuantity ? "0" : "1";
+
+    if (actionButton instanceof HTMLButtonElement) {
+      actionButton.textContent = existingQuantity
+        ? "Update Cart"
+        : "Add to Cart";
     }
   });
 }
@@ -62,15 +133,17 @@ async function renderMenu() {
     return;
   }
 
-  addToCartButton(menuContent);
-
   try {
-    const menuData = await fetchMenuData();
+    await fetchMenuData();
     const menuMarkup = menuData
       .map(({ title, items }) => buildSections(title, items))
       .join("");
-
+    addToCartButton(menuContent);
     menuContent.insertAdjacentHTML("beforeend", menuMarkup);
+    syncMenuFromCart(menuContent);
+    window.addEventListener("cart:updated", () => {
+      syncMenuFromCart(menuContent);
+    });
   } catch (error) {
     menuContent.innerHTML = `
       <section class="menu-section">
