@@ -30,6 +30,13 @@
         "description": "Buttermilk battered onion rings served with saffron remoulade.",
         "price": 9.5,
         "image": "./assets/images/onion_rings.png"
+      },
+      {
+        "itemId": "app-005",
+        "name": "Girl Dinner",
+        "description": "An artisan grilled cheese with 3 types of cheese, with a side of tortilla chips covered in creamy nacho cheese.",
+        "price": 13,
+        "image": "./assets/images/girl_dinner.png"
       }
     ]
   },
