@@ -8,28 +8,28 @@
         "name": "Crispy Truffle Fries",
         "description": "Hand-cut fries finished with truffle oil, parmesan, and herb salt.",
         "price": 8.5,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Crispy+Truffle+Fries"
+        "image": "./assets/images/truffle_fries.png"
       },
       {
         "itemId": "app-002",
         "name": "Wagyu Sliders",
-        "description": "Three mini wagyu sliders with caramelized onion and smoked aioli.",
+        "description": "Four mini wagyu sliders with caramelized onion and smoked aioli.",
         "price": 13,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Wagyu+Sliders"
+        "image": "./assets/images/wagyu_sliders.png"
       },
       {
         "itemId": "app-003",
         "name": "Smoked Wings",
         "description": "Applewood-smoked wings glazed in honey chipotle and crispy shallots.",
         "price": 12,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Smoked+Wings"
+        "image": "./assets/images/smoked_wings.png"
       },
       {
         "itemId": "app-004",
         "name": "Golden Onion Rings",
         "description": "Buttermilk battered onion rings served with saffron remoulade.",
         "price": 9.5,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Golden+Onion+Rings"
+        "image": "./assets/images/onion_rings.png"
       }
     ]
   },
@@ -39,38 +39,38 @@
     "items": [
       {
         "itemId": "brg-001",
-        "name": "The Midas Signature",
+        "name": "The Midas Touch",
         "description": "Double smash patties, aged cheddar, house pickles, and black garlic aioli.",
         "price": 16,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=The+Midas+Signature"
+        "image": "./assets/images/midas_touch.png"
       },
       {
         "itemId": "brg-002",
         "name": "Truffle Bistro Burger",
         "description": "Prime beef, wild mushroom spread, truffle brie, and arugula.",
         "price": 18.5,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Truffle+Bistro+Burger"
+        "image": "./assets/images/truffle_bistro_burger.png"
       },
       {
         "itemId": "brg-003",
         "name": "Bourbon Bacon Stack",
         "description": "Bourbon-glazed bacon, crispy onions, sharp cheddar, and bourbon sauce.",
         "price": 17.5,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Bourbon+Bacon+Stack"
+        "image": "./assets/images/bourbon_bacon_stack.png"
       },
       {
         "itemId": "brg-004",
-        "name": "Hot Honey Firebird",
+        "name": "Hot Honey Yardbird",
         "description": "Crispy chicken breast, pepper jack, slaw, and hot honey drizzle.",
         "price": 15,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Hot+Honey+Firebird"
+        "image": "./assets/images/hot_honey_yardbird.png"
       },
       {
         "itemId": "brg-005",
-        "name": "Garden Luxe",
+        "name": "Fools Gold Veggie Burger",
         "description": "Plant-based patty, avocado mash, tomato jam, and butter lettuce.",
         "price": 15.5,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Garden+Luxe"
+        "image": "./assets/images/veggie_burger.png"
       }
     ]
   },
@@ -83,28 +83,28 @@
         "name": "Parmesan Garlic Tots",
         "description": "Golden tater tots tossed with garlic butter, parmesan, and parsley.",
         "price": 7.5,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Parmesan+Garlic+Tots"
+        "image": "./assets/images/garlic_tots.png"
       },
       {
         "itemId": "sid-002",
         "name": "Roasted Street Corn",
         "description": "Charred sweet corn with lime crema, cotija, and smoked chili.",
         "price": 8,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Roasted+Street+Corn"
+        "image": "./assets/images/street_corn.png"
       },
       {
         "itemId": "sid-003",
-        "name": "House Slaw",
+        "name": "Cole's Law - House Slaw",
         "description": "Crisp cabbage and carrot slaw with citrus-mustard dressing.",
         "price": 6,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=House+Slaw"
+        "image": "./assets/images/coleslaw.png"
       },
       {
         "itemId": "sid-004",
-        "name": "Mac and Three Cheese",
+        "name": "Three Cheese Mac Attack",
         "description": "Creamy elbow pasta with cheddar, gruyere, and smoked gouda.",
         "price": 9,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Mac+and+Three+Cheese"
+        "image": "./assets/images/mac_attack.png"
       }
     ]
   },
@@ -117,28 +117,28 @@
         "name": "Smoked Old Fashioned",
         "description": "Bourbon, demerara, bitters, and orange oils with oak smoke.",
         "price": 14,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Smoked+Old+Fashioned"
+        "image": "./assets/images/old_fashioned.png"
       },
       {
         "itemId": "drk-002",
         "name": "Golden Hour Spritz",
         "description": "Citrus aperitif, sparkling wine, and grapefruit tonic.",
         "price": 12,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Golden+Hour+Spritz"
+        "image": "./assets/images/golden_hour_spritz.png"
       },
       {
         "itemId": "drk-003",
         "name": "Blackberry Mint Lemonade",
         "description": "Fresh lemon, blackberry puree, mint, and sparkling water.",
         "price": 7,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Blackberry+Mint+Lemonade"
+        "image": "./assets/images/blackberry_mint_lemonade.png"
       },
       {
         "itemId": "drk-004",
-        "name": "Cold Brew Float",
-        "description": "House cold brew topped with vanilla bean cream float.",
+        "name": "Irish Cold Brew Float",
+        "description": "House cold brew mixed with Irish cream and topped with vanilla bean cream float.",
         "price": 8.5,
-        "image": "https://placehold.co/800x500/1f1f1f/e2c46f?text=Cold+Brew+Float"
+        "image": "./assets/images/cold_brew_float.png"
       }
     ]
   }
