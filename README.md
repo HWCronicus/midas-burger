@@ -1,12 +1,12 @@
 # Midas Burgers 🍔✨
 
-A web development project for class COP2022 featuring a fully functional front-end prototype for a luxury-themed hamburger restaurant. Built entirely with vanilla web technologies, this site includes an interactive shopping cart system, dynamic page effects, and uses locally generated AI media assets.
+A web development project for class COP2822C (Professor Masline) featuring a fully functional front-end for a local hamburger restaurant. Built entirely with vanilla web technologies, this site includes an interactive shopping cart system, dynamic page effects, and uses locally generated AI media assets.
 
 ---
 
 ## 📌 Project Overview
 
-**Midas Burgers** is a fictitious hamburger restaurant concept designed to demonstrate modern, interactive front-end web development techniques without relying on third-party frameworks or external libraries.
+**Midas Burger** is a fictitious hamburger restaurant concept designed to demonstrate modern, interactive front-end web development techniques without relying on third-party frameworks or external libraries.
 
 > **Disclaimer:** This website is strictly for demonstration and educational purposes for a college coursework assignment. It is **not** a real business and **does not** accept, process, or deliver actual food orders.
 
@@ -25,31 +25,78 @@ A web development project for class COP2022 featuring a fully functional front-e
 - **Interactive Shopping Cart:** Add items, adjust quantities, calculate totals in real time, and persist cart state using JavaScript.
 - **Simulated Checkout Flow:** Walk through a multi-step checkout process without real payment processing.
 - **Dynamic Page Effects:** Custom UI interactions, smooth animations, and event-driven elements built with native JS DOM manipulation.
-- **Custom AI Media:** All restaurant photography, item images, and promotional video assets were locally generated using AI tools specifically for this project theme.
+- **Custom AI Media:** All restaurant photography, item images, and promotional video assets were locally generated using AI tools (ComfyUI) specifically for this project.
 - **Zero External Dependencies:** Built purely with standard, lightweight web technologies for optimal performance and easy hosting.
+- **Containerized Deployment:** Packaged with Docker and Docker Compose for easy local runs and straightforward server deployment.
+
+---
+
+## 🐳 Run Locally with Docker
+
+### Prerequisites
+
+- Docker Desktop (Windows/macOS) or Docker Engine + Docker Compose plugin (Linux)
+
+### Start the website container
+
+From the project root, run:
+
+```bash
+docker compose up -d --build
+```
+
+The site will be available at:
+
+```text
+http://localhost:8080
+```
+
+### Stop the container
+
+```bash
+docker compose down
+```
+
+### Rebuild after changes
+
+```bash
+docker compose up -d --build
+```
 
 ---
 
 ## 📂 Project Structure
 
 ```text
-midas-burgers/
+midas-burger/
 ├── index.html          # Home / Landing Page
-├── location.html       # Locations and Map Page
 ├── about.html          # About Us Page
 ├── menu.html           # Restaurant Menu & Ordering Page
+├── locations.html      # Locations and Map Page
 ├── checkout.html       # Cart Summary & Simulated Checkout
+├── robots.txt          # Search crawler directives
+├── sitemap.xml         # XML sitemap for search engines
+├── Dockerfile          # Nginx static site container image
+├── docker-compose.yml  # Local container orchestration
+├── nginx.conf          # Nginx site configuration
+├── .dockerignore       # Docker build context exclusions
 ├── css/
-│   └── styles.css      # Primary styling
-│   └── home.css        # Home page specific styling
-│   └── locations.css   # Location page and Google Map styling
-│   └── about.css       # About Us page, and embedded video styling
+│   ├── styles.css      # Shared global styles
+│   ├── home.css        # Home page styles
+│   ├── about.css       # About page styles
+│   ├── menu.css        # Menu page styles
+│   ├── locations.css   # Locations page styles
+│   └── checkout.css    # Checkout page styles
 ├── js/
-│   ├── cart.js         # Shopping cart logic & state management
-│   └── main.js         # Navigation, animations, and page effects
-│   └── locations.js    # Google Map and location link map interactions
+│   ├── main.js         # Navigation and shared UI behavior
+│   ├── cart.js         # Cart state management
+│   ├── menu.js         # Menu rendering and interactions
+│   ├── locations.js    # Map and location interactions
+│   └── checkout.js     # Checkout flow behavior
+├── data/
+│   └── menu.json       # Menu item data source
 └── assets/
     ├── images/         # Locally AI-generated images
-    └── videos/         # Locally AI-generated background/promo videos
+    └── video/          # Locally AI-generated video assets
 ```
 

@@ -1,0 +1,9 @@
+services:
+  midas-burger:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: midas-burger
+    restart: unless-stopped
+    ports:
+      - "8080:80"
