@@ -1,3 +1,17 @@
+<p align="center">
+    <a href="#"><img alt="Visual Studio Code" src="https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7.svg?logo=visualstudiocode&amp;logoColor=white" /></a>
+    <a href="#"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&amp;logoColor=000" /></a>
+    <a href="#"><img alt="JSON" src="https://img.shields.io/badge/JSON-000?logo=json&amp;logoColor=fff" /></a>
+</p>
+
+<p align="center">
+    <a href="./lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse Performance" src="./lighthouse/badges/lighthouse_performance.svg" />
+    <a href="./lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse Accessibility" src="./lighthouse/badges/lighthouse_accessibility.svg" /></a>
+    <a href="./lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse Best Practices" src="./lighthouse/badges/lighthouse_best-practices.svg" /></a>
+    <a href="./lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse SEO" src="./lighthouse/badges/lighthouse_seo.svg" /></a>
+    <a href="./lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse Agentic Browsing" src="./lighthouse/badges/lighthouse_agentic-browsing.svg" /></a>
+</p>
+
 # Midas Burgers 🍔✨
 
 A web development project for class COP2822C (Professor Masline) featuring a fully functional front-end for a local hamburger restaurant. Built entirely with vanilla web technologies, this site includes an interactive shopping cart system, dynamic page effects, and uses locally generated AI media assets.
