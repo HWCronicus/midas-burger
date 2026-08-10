@@ -5,11 +5,11 @@
 </p>
 
 <p align="center">
-    <a href="./lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse Performance" src="./lighthouse/badges/lighthouse_performance.svg" />
-    <a href="./lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse Accessibility" src="./lighthouse/badges/lighthouse_accessibility.svg" /></a>
-    <a href="./lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse Best Practices" src="./lighthouse/badges/lighthouse_best-practices.svg" /></a>
-    <a href="./lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse SEO" src="./lighthouse/badges/lighthouse_seo.svg" /></a>
-    <a href="./lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse Agentic Browsing" src="./lighthouse/badges/lighthouse_agentic-browsing.svg" /></a>
+    <a href="https://htmlpreview.github.io/?https://github.com/HWCronicus/midas-burger/blob/main/lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse Performance" src="./lighthouse/badges/lighthouse_performance.svg" />
+    <a href="https://htmlpreview.github.io/?https://github.com/HWCronicus/midas-burger/blob/main/lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse Accessibility" src="./lighthouse/badges/lighthouse_accessibility.svg" /></a>
+    <a href="https://htmlpreview.github.io/?https://github.com/HWCronicus/midas-burger/blob/main/lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse Best Practices" src="./lighthouse/badges/lighthouse_best-practices.svg" /></a>
+    <a href="https://htmlpreview.github.io/?https://github.com/HWCronicus/midas-burger/blob/main/lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse SEO" src="./lighthouse/badges/lighthouse_seo.svg" /></a>
+    <a href="https://htmlpreview.github.io/?https://github.com/HWCronicus/midas-burger/blob/main/lighthouse/midas-burger-report.html" target="_blank"><img alt="Lighthouse Agentic Browsing" src="./lighthouse/badges/lighthouse_agentic-browsing.svg" /></a>
 </p>
 
 # Midas Burgers 🍔✨
