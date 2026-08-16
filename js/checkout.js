@@ -69,9 +69,7 @@ function renderReviewRows(items) {
 
       return `
         <article class="checkout-row" data-item-id="${item.itemId}">
-          <object class="checkout-thumb" data="${item.image}" aria-label="${item.name}" type="image/jpg">
-            <img class="checkout-thumb" src="${generatePlaceholderImageUrl(item.name)}" alt="${item.name}" loading="lazy" />
-          </object>
+          ${buildImageMarkup("checkout-thumb", item.image, item.name)}
           <div class="checkout-item-details">
             <div class="checkout-name">${item.name}</div>
             <div class="checkout-item-controls">
@@ -93,9 +91,7 @@ function renderSummaryRows(items) {
 
       return `
         <article class="checkout-row checkout-row-static">
-          <object class="checkout-thumb" data="${item.image}" aria-label="${item.name}" type="image/jpg">
-            <img class="checkout-thumb" src="${generatePlaceholderImageUrl(item.name)}" alt="${item.name}" loading="lazy" />
-          </object>
+          ${buildImageMarkup("checkout-thumb", item.image, item.name)}
           <div class="checkout-item-details">
             <div class="checkout-name">${item.name}</div>
             <div class="checkout-qty">Qty: ${item.quantity}</div>

@@ -227,9 +227,7 @@ function renderCart() {
       const combinedPrice = item.price * item.quantity;
       return `
         <li class="cart-item">
-          <object class="cart-thumb" data="${item.image}" alt="${item.name}" loading="lazy" type="image/jpg">
-            <img class="cart-thumb" src="${generatePlaceholderImageUrl(item.name)}" alt="${item.name}" loading="lazy"/>
-            </object>
+          ${buildImageMarkup("cart-thumb", item.image, item.name)}
           <div class="cart-item-details">
             <span class="cart-item-name">${item.name}</span>
             <input class="cart-item-quantity" type="number" min="1" step="1" value="${item.quantity}" aria-label="Quantity for ${item.name}" onChange="updateItemInCart('${item.itemId}', { quantity: Number(this.value) })" />

@@ -23,9 +23,7 @@ function buildSections(title, items) {
 function createMenuItemCard(item) {
   return `
     <div class="menu-card" item-id="${item.itemId}">
-      <object class="menu-card-image" data="${item.image}" alt="${item.name}" loading="lazy" type="image/jpg">
-        <img class="menu-card-image" src="${generatePlaceholderImageUrl(item.name)}" alt="${item.name}" loading="lazy"/>
-      </object>
+      ${buildImageMarkup("menu-card-image", item.image, item.name)}
       <div class="menu-card-body">
         <h3 class="menu-card-name">${item.name}</h3>
         <p class="menu-card-description">${item.description}</p>
