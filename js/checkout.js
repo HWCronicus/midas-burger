@@ -109,65 +109,80 @@ function renderSummaryRows(items) {
 
 function renderCheckoutReview(root, items) {
   const rows = renderReviewRows(items);
-  const reviewTotal = document.getElementById("checkout-review-total");
-  const reviewActions = document.getElementById("checkout-review-actions");
-  const reviewStage = document.getElementById("checkout-review-stage");
-  const detailsStage = document.getElementById("checkout-details-stage");
-  const emptyState = document.getElementById("checkout-empty");
-
-  root.innerHTML = rows;
-
-  if (reviewTotal) {
-    reviewTotal.textContent = `Total: ${window.CartAPI.getTotalPrice()}`;
-    reviewTotal.hidden = false;
-  }
-
-  if (reviewActions) {
-    reviewActions.hidden = false;
-  }
-
-  if (reviewStage) {
-    reviewStage.hidden = false;
-  }
-
-  if (detailsStage) {
-    detailsStage.hidden = true;
-  }
-
-  if (emptyState) {
-    emptyState.hidden = true;
-  }
+  root.innerHTML = `
+    ${rows}
+    <div class="checkout-total">Total: ${window.CartAPI.getTotalPrice()}</div>
+    <div class="checkout-review-actions">
+      <button class="checkout-confirm-button" type="button">Checkout</button>
+    </div>
+  `;
 }
 
 function renderCheckoutForm(root, items) {
   const rows = renderSummaryRows(items);
-  const summaryRoot = document.getElementById("checkout-summary-items");
-  const summaryTotal = document.getElementById("checkout-summary-total");
-  const reviewStage = document.getElementById("checkout-review-stage");
-  const detailsStage = document.getElementById("checkout-details-stage");
-  const emptyState = document.getElementById("checkout-empty");
+  root.innerHTML = `
+    <div class="checkout-layout">
+      <section class="checkout-review-panel" aria-label="Order summary">
+        <h2 class="checkout-panel-title">Cart Review</h2>
+        <div class="checkout-items">${rows}</div>
+        <div class="checkout-total">Total: ${window.CartAPI.getTotalPrice()}</div>
+      </section>
 
-  root.innerHTML = "";
-
-  if (summaryRoot) {
-    summaryRoot.innerHTML = rows;
-  }
-
-  if (summaryTotal) {
-    summaryTotal.textContent = `Total: ${window.CartAPI.getTotalPrice()}`;
-  }
-
-  if (reviewStage) {
-    reviewStage.hidden = true;
-  }
-
-  if (detailsStage) {
-    detailsStage.hidden = false;
-  }
-
-  if (emptyState) {
-    emptyState.hidden = true;
-  }
+      <section class="checkout-form-panel" aria-label="Checkout form">
+        <h2 class="checkout-panel-title">Checkout Details</h2>
+        <form id="checkout-form" class="checkout-form" novalidate>
+          <label class="checkout-field">
+            <span>First Name</span>
+            <input name="firstName" type="text" autocomplete="given-name" placeholder="First Name" required />
+          </label>
+          <label class="checkout-field">
+            <span>Last Name</span>
+            <input name="lastName" type="text" autocomplete="family-name" placeholder="Last Name" required />
+          </label>
+          <label class="checkout-field">
+            <span>Phone Number</span>
+            <input name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(123) 456-7890" maxlength="14" pattern="\\(\\d{3}\\) \\d{3}-\\d{4}" required />
+          </label>
+          <label class="checkout-field">
+            <span>Address</span>
+            <input name="address" type="text" autocomplete="street-address" placeholder="123 Main St" required />
+          </label>
+          <div class="checkout-field-row checkout-field-row-triple">
+            <label class="checkout-field">
+              <span>City</span>
+              <input name="city" type="text" autocomplete="address-level2" placeholder="Jacksonville" required />
+            </label>
+            <label class="checkout-field">
+              <span>State</span>
+              <input name="state" type="text" autocomplete="address-level1" maxlength="2" placeholder="FL" required />
+            </label>
+            <label class="checkout-field">
+              <span>Zip Code</span>
+              <input name="zipCode" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="\\d{5}" placeholder="32207" required />
+            </label>
+          </div>
+          <label class="checkout-field">
+            <span>Credit Card Number</span>
+            <input name="cardNumber" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="XXXX XXXX XXXX XXXX" required />
+          </label>
+          <div class="checkout-field-row">
+            <label class="checkout-field">
+              <span>Security Code</span>
+              <input name="securityCode" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="XXX" maxlength="4" pattern="\\d{3,4}" required />
+            </label>
+            <label class="checkout-field">
+              <span>Exp Date</span>
+              <input name="expDate" type="text" inputmode="numeric" maxlength="5" placeholder="MM/YY" pattern="(0[1-9]|1[0-2])/[0-9]{2}" autocomplete="cc-exp" required />
+            </label>
+          </div>
+          <div class="checkout-form-actions">
+            <button class="checkout-clear-button" type="reset">Clear Form</button>
+            <button class="checkout-submit-button" type="submit">Submit Order</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  `;
 }
 
 function showOrderSuccessPopup() {
@@ -208,13 +223,6 @@ function renderCheckout() {
   }
 
   const heading = document.querySelector(".checkout-content h1");
-  const reviewStage = document.getElementById("checkout-review-stage");
-  const reviewTotal = document.getElementById("checkout-review-total");
-  const reviewActions = document.getElementById("checkout-review-actions");
-  const detailsStage = document.getElementById("checkout-details-stage");
-  const summaryRoot = document.getElementById("checkout-summary-items");
-  const summaryTotal = document.getElementById("checkout-summary-total");
-  const emptyState = document.getElementById("checkout-empty");
 
   const items = window.CartAPI.getItems();
   if (!items.length) {
@@ -222,38 +230,7 @@ function renderCheckout() {
     if (heading) {
       heading.textContent = "Review Your Cart";
     }
-
-    root.innerHTML = "";
-
-    if (summaryRoot) {
-      summaryRoot.innerHTML = "";
-    }
-
-    if (summaryTotal) {
-      summaryTotal.textContent = "";
-    }
-
-    if (reviewTotal) {
-      reviewTotal.hidden = true;
-      reviewTotal.textContent = "";
-    }
-
-    if (reviewActions) {
-      reviewActions.hidden = true;
-    }
-
-    if (reviewStage) {
-      reviewStage.hidden = true;
-    }
-
-    if (detailsStage) {
-      detailsStage.hidden = true;
-    }
-
-    if (emptyState) {
-      emptyState.hidden = false;
-    }
-
+    root.innerHTML = `<p class="checkout-empty">Your cart is empty.</p>`;
     return;
   }
 
@@ -390,16 +367,16 @@ function onCheckoutFormSubmit(event) {
 
 document.addEventListener("DOMContentLoaded", () => {
   renderCheckout();
-  const checkoutContent = document.querySelector(".checkout-content");
-  if (!checkoutContent) {
+  const root = document.getElementById("checkout-items");
+  if (!root) {
     return;
   }
 
-  checkoutContent.addEventListener("click", onCheckoutButtonClick);
-  checkoutContent.addEventListener("click", onRemoveButtonClick);
-  checkoutContent.addEventListener("change", onCheckoutItemsChange);
-  checkoutContent.addEventListener("input", onCheckoutFormInput);
-  checkoutContent.addEventListener("submit", onCheckoutFormSubmit);
+  root.addEventListener("click", onCheckoutButtonClick);
+  root.addEventListener("click", onRemoveButtonClick);
+  root.addEventListener("change", onCheckoutItemsChange);
+  root.addEventListener("input", onCheckoutFormInput);
+  root.addEventListener("submit", onCheckoutFormSubmit);
 });
 
 window.addEventListener("cart:updated", renderCheckout);
